@@ -1,0 +1,133 @@
+.output {
+  margin-top: 40px;
+  background-color: #6cdc93;
+  border: 1px solid #0c0c0c;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.outputHeader {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.outputContent {
+  white-space: pre-wrap;
+}
+
+.answer {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.garyAnswer {
+  font-weight: bold;
+}
+
+.botName {
+  font-weight: bold;
+}
+
+.chatMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.question {
+  background-color: #0d9340;
+  color: #444;
+  padding: 8px 12px;
+  border-radius: 20px 20px 20px 0;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+body.bg-image {
+  background-image: url("/growbot.jpg");
+  background-size: cover;
+}
+
+.answerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.garyAnswer,
+.meAnswer {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.answer {
+  background-color: #444;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px 20px 0 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.chatFormContainer {
+  margin-top: 20px;
+  height: 100px; /* Set a fixed height for the chat log container */
+  overflow-y: scroll; /* Add a scrollbar to the chat log container */
+}
+
+.chatLog {
+  height: 100%; /* Set the chat log to take up all available space */
+  display: flex;
+  flex-direction: column; /* Display messages in a column */
+  align-items: flex-start; /* Align messages to the left */
+  overflow-y: auto; /* Add a scrollbar to the chat log */
+}
+.chatFormContainer {
+  margin-top: 20px;
+  height: 200px; /* Set a fixed height for the chat log container */
+  overflow-y: scroll; /* Add a scrollbar to the chat log container */
+}
+
+.chatForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.chatForm input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.chatButton {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer; /* Added missing "pointer" value */
+}

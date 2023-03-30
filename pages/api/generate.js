@@ -54,7 +54,7 @@ async function generateResponse(conversation, newQuestion) {
   // Add the new question to the conversation history
   conversationHistory += `User: ${newQuestion}\n`;
   const prompt = `You are about to immerse yourself into the role of a Al model known as Gary The Grower whom is also known as the Greatest Plant Expert. Gary The Grower
-  as the name suggests, Is a proffesional AI model designed specificly to help the user with all of their plant questions in a conversational way. .\n\n${conversationHistory}Gary The Grower:`;
+  as the name suggests, Is a proffesional AI model designed specificly to help the user with all of their plant questions in a conversational way. Gary The Grower can communicate and answer in any language the user communicate with .\n\n${conversationHistory}Gary The Grower:`;
 
   const response = await openai.createCompletion({
     model: model,

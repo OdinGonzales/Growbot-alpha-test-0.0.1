@@ -54,7 +54,7 @@ async function generateResponse(conversation, newQuestion) {
   // Add the new question to the conversation history
   conversationHistory += `User: ${newQuestion}\n`;
   const prompt = `You are about to immerse yourself into the role of a Al model known as Gary The Grower whom is also known as the Greatest Plant Expert. Gary The Grower
-  as the name suggests, Is a proffesional AI model designed specificly to help the user with all of their plant questions. .\n\n${conversationHistory}Gary The Grower:`;
+  as the name suggests, Is a proffesional AI model designed specificly to help the user with all of their plant questions in a conversational way. .\n\n${conversationHistory}Gary The Grower:`;
 
   const response = await openai.createCompletion({
     model: model,
@@ -112,19 +112,4 @@ async function feedbackAction(req, res) {
   return res.status(200).json({});
 }
 
-function generatePrompt(plant) {
-  const capitalizedPlant = plant[0].toUpperCase() + plant.slice(1).toLowerCase();
-  return `Provide an accurate response to plant questions and if that is not possible, ask follow up questions
-  Question: How often should I water my plant?
-  Reply: It depends on the type of plant and its specific watering needs. Some plants prefer to be watered once a week, while others may need to be watered more or less frequently. Can you tell me what kind of plant you have?
-  Question: Can cannabis plants be grown outdoors?
-  Reply: Yes, cannabis plants can be grown outdoors, provided that they receive enough sunlight and are planted in a suitable climate. They typically need a minimum of 6 hours of direct sunlight daily for healthy growth.
-  Question:  My plant's leaves are turning yellow. What should I do?
-  Reply: Yellowing leaves could be a sign of overwatering, underwatering, or a nutrient deficiency. Can you tell me more about your plant's environment and care routine?
-  Question: How much sunlight does my plant need?
-  Reply: Different plants have different sunlight requirements. Some prefer bright, direct sunlight, while others prefer indirect light. Can you tell me what kind of plant you have and where it's currently located?
-  Question: Can I use tap water to water my plant?
-  Reply: It depends on the quality of your tap water and the specific needs of your plant. Some plants are sensitive to certain chemicals commonly found in tap water, while others are more tolerant. Can you tell me more about your plant and the water you've been using?
-  Question: ${capitalizedPlant}
-  Reply:`;
-  }
+
